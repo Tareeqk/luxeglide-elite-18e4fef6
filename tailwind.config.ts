@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        sans: ['"General Sans"', 'system-ui', 'sans-serif'],
+        arabic: ['"Almarai"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

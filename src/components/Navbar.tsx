@@ -1,30 +1,30 @@
 import { useState } from "react";
-import { Phone, MessageCircle, Menu, X } from "lucide-react";
+import { Phone, MessageCircle, Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const PHONE = "+971500000000";
 const WHATSAPP = "971500000000";
 
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Contact Us", href: "#contact" },
-];
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { t, toggleLang, lang } = useLanguage();
+
+  const navLinks = [
+    { label: t("nav.home"), href: "#home" },
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.services"), href: "#services" },
+    { label: t("nav.contact"), href: "#contact" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-md border-b border-gold/20">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        {/* Logo */}
         <a href="#home" className="flex-shrink-0">
           <img src={logo} alt="LuxeGlide Elite" className="h-10 md:h-14 w-auto" />
         </a>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -37,14 +37,21 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={toggleLang}
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-background/20 text-background/70 text-sm font-semibold hover:border-gold hover:text-gold transition-colors"
+            aria-label="Toggle language"
+          >
+            <Globe className="w-4 h-4" />
+            {lang === "en" ? "عربي" : "EN"}
+          </button>
           <a
             href={`tel:${PHONE}`}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold text-foreground text-sm font-semibold hover:bg-gold-light transition-colors"
           >
             <Phone className="w-4 h-4" />
-            Call Now
+            {t("nav.call")}
           </a>
           <a
             href={`https://wa.me/${WHATSAPP}`}
@@ -53,21 +60,28 @@ const Navbar = () => {
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold text-gold text-sm font-semibold hover:bg-gold hover:text-foreground transition-colors"
           >
             <MessageCircle className="w-4 h-4" />
-            WhatsApp
+            {t("nav.whatsapp")}
           </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-background"
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="flex md:hidden items-center gap-3">
+          <button
+            onClick={toggleLang}
+            className="text-background/70 hover:text-gold transition-colors text-sm font-bold"
+            aria-label="Toggle language"
+          >
+            {lang === "en" ? "عربي" : "EN"}
+          </button>
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-background"
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -93,7 +107,7 @@ const Navbar = () => {
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold text-foreground text-sm font-semibold"
                 >
                   <Phone className="w-4 h-4" />
-                  Call Now
+                  {t("nav.call")}
                 </a>
                 <a
                   href={`https://wa.me/${WHATSAPP}`}
@@ -102,7 +116,7 @@ const Navbar = () => {
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold text-gold text-sm font-semibold"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  WhatsApp
+                  {t("nav.whatsapp")}
                 </a>
               </div>
             </div>
