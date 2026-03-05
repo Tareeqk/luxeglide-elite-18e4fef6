@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import heroCar from "@/assets/hero-car.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const PHONE = "+971500000000";
-const WHATSAPP = "971500000000";
+const PHONE = "+971562427288";
+const WHATSAPP = "971562427288";
 
 const HeroSection = () => {
   const { t } = useLanguage();

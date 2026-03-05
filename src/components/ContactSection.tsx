@@ -3,8 +3,8 @@ import { useRef } from "react";
 import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const PHONE = "+971500000000";
-const WHATSAPP = "971500000000";
+const PHONE = "+971562427288";
+const WHATSAPP = "971562427288";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -12,12 +12,11 @@ const ContactSection = () => {
   const { t } = useLanguage();
 
   const items = [
-    { icon: Phone, title: t("contact.call"), detail: "+971 50 000 0000", href: `tel:${PHONE}` },
+    { icon: Phone, title: t("contact.call"), detail: "+971 56 242 7288", href: `tel:${PHONE}` },
     { icon: MessageCircle, title: t("contact.wa"), detail: t("contact.chat"), href: `https://wa.me/${WHATSAPP}` },
-    { icon: Mail, title: t("contact.email"), detail: "info@luxeglideelite.com", href: "mailto:info@luxeglideelite.com" },
-    { icon: MapPin, title: t("contact.location"), detail: t("contact.dubai"), href: "#" },
+    { icon: Mail, title: t("contact.email"), detail: "info@Luxeglide.elite@hotmail.com", href: "mailto:info@Luxeglide.elite@hotmail.com" },
+    { icon: MapPin, title: t("contact.location"), detail: t("contact.dubai"), href: "https://maps.app.goo.gl/oMedxFejHPvregjdA?g_st=ic" },
   ];
-
   return (
     <section id="contact" className="py-20 md:py-32 bg-background">
       <div className="container" ref={ref}>

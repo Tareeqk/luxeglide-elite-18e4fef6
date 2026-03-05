@@ -30,12 +30,14 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+            {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-foreground transition-all"
               aria-label="Facebook">
               <Facebook className="w-5 h-5" />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+            </a> */}
+            <a href="https://www.instagram.com/luxeglide.elite?igsh=MWdrMXR2ODA5c2l6OA%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-foreground transition-all"
               aria-label="Instagram">
               <Instagram className="w-5 h-5" />
