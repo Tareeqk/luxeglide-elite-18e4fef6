@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}

@@ -37,7 +37,11 @@ const ContactSection = () => {
                 <item.icon className="w-6 h-6 text-foreground" />
               </div>
               <h3 className="font-bold text-foreground mb-1">{item.title}</h3>
-              <p className="text-muted-foreground text-sm">{item.detail}</p>
+              <p className="text-muted-foreground text-sm">
+                <span dir="ltr" style={{ unicodeBidi: "isolate" }}>
+                  {item.detail}
+                </span>
+              </p>
             </motion.a>
           ))}
         </div>

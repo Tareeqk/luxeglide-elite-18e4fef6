@@ -21,7 +21,7 @@ const ServicesSection = () => {
     <section id="services" className="py-20 md:py-32 dark-gradient">
       <div className="container" ref={ref}>
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center mb-16">
-          <p className="text-gold font-semibold tracking-[0.2em] uppercase text-sm mb-3">{t("services.tag")}</p>
+          <p className="text-gold font-semibold uppercase text-sm mb-3">{t("services.tag")}</p>
           <h2 className="text-3xl md:text-4xl font-bold text-background mb-4">{t("services.title")}</h2>
           <p className="text-background/60 max-w-2xl mx-auto">{t("services.desc")}</p>
         </motion.div>

@@ -20,7 +20,7 @@ const AboutSection = () => {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.2 }}>
-            <p className="text-gold font-semibold tracking-[0.2em] uppercase text-sm mb-3">{t("about.tag")}</p>
+            <p className="text-gold font-semibold uppercase text-sm mb-3">{t("about.tag")}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
               {t("about.title1")}{" "}
               <span className="text-gold-gradient">{t("about.title2")}</span>
