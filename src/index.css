@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
 @font-face {
-  font-family: 'General Sans';
-  src: url('https://cdn.fontshare.com/wf/DNPMAOY6LVCX2YAJHVUFMKJY4BQPJVWI/UAUYGXJBMQWWNFVQHBGQMMVVLR3CQWWI/QW5AZN6JWXRB2V5MPVIGBM4Z5MY5RQSF.woff2') format('woff2');
+  font-family: "General Sans";
+  src: url("https://cdn.fontshare.com/wf/DNPMAOY6LVCX2YAJHVUFMKJY4BQPJVWI/UAUYGXJBMQWWNFVQHBGQMMVVLR3CQWWI/QW5AZN6JWXRB2V5MPVIGBM4Z5MY5RQSF.woff2")
+    format("woff2");
   font-weight: 200 800;
   font-display: swap;
   font-style: normal;
@@ -81,6 +82,10 @@
 
   .dark-gradient {
     background: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(224 54% 12%) 100%);
+  }
+
+  .dark {
+    background: hsl(0 0% 0%);
   }
 
   .text-gold-gradient {

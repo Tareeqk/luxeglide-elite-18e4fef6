@@ -1,7 +1,7 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react"
 
-const PHONE = "+971500000000";
-const WHATSAPP = "971500000000";
+const PHONE = "+971562427288"
+const WHATSAPP = "971562427288"
 
 const FloatingButtons = () => {
   return (
@@ -23,7 +23,7 @@ const FloatingButtons = () => {
         <Phone className="w-6 h-6 text-foreground" />
       </a>
     </div>
-  );
-};
+  )
+}
 
-export default FloatingButtons;
+export default FloatingButtons
