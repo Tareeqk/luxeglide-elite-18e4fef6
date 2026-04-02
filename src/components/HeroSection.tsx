@@ -1,6 +1,6 @@
 import { Phone, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
-import heroCar from "@/assets/hero-car.jpg"
+import heroCar from "@/assets/hero-car.webp"
 import { useLanguage } from "@/contexts/LanguageContext"
 
 const PHONE = "+971562427288"

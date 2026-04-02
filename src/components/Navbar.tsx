@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Phone, MessageCircle, Menu, X, Globe } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import logo from "@/assets/logo.png"
+import logo from "@/assets/logo.webp"
 import { useLanguage } from "@/contexts/LanguageContext"
 
 const PHONE = "+971562427288"
