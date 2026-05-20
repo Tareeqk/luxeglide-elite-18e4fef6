@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import logo from "@/assets/logo.webp"
 import { useLanguage } from "@/contexts/LanguageContext"
 
-const PHONE = "+971562427288"
-const WHATSAPP = "971562427288"
+const PHONE = "+971562427288";
+const WHATSAPP = "971562427288";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
