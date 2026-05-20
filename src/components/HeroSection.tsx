@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 
 import heroImage from "../assets/cars.png";
 
-const PHONE = "+971562427288";
-const WHATSAPP = "971562427288";
+const PHONE = "+971562427288"
+const WHATSAPP = "971562427288"
 
 export default function HeroSection() {
   const items = [

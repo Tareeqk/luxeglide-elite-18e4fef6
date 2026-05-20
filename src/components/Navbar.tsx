@@ -1,28 +1,32 @@
-import { useState } from "react";
-import { Phone, MessageCircle, Menu, X, Globe } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/logo.png";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useState } from "react"
+import { Phone, MessageCircle, Menu, X, Globe } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import logo from "@/assets/logo.webp"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const PHONE = "+971562427288";
 const WHATSAPP = "971562427288";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const { t, toggleLang, lang } = useLanguage();
+  const [open, setOpen] = useState(false)
+  const { t, toggleLang, lang } = useLanguage()
 
   const navLinks = [
     { label: t("nav.home"), href: "#home" },
     { label: t("nav.about"), href: "#about" },
     { label: t("nav.services"), href: "#services" },
     { label: t("nav.contact"), href: "#contact" },
-  ];
+  ]
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-md border-b border-gold/20">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#home" className="flex-shrink-0">
-          <img src={logo} alt="LuxeGlide Elite" className="h-10 md:h-14 w-auto" />
+          <img
+            src={logo}
+            alt="LuxeGlide Elite"
+            className="h-10 md:h-14 w-auto"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -124,7 +128,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
