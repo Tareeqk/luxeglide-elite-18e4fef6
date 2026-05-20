@@ -63,7 +63,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.email": "Email",
     "contact.location": "Location",
     "contact.chat": "Chat with us",
-    "contact.dubai": "Dubai, UAE",
+    "contact.dubai": "Office 160, Exchange Tower, Al Mustaqbal street, Business Bay, Dubai",
 
     // Footer
     "footer.tagline": "Seamless Journeys, Unmatched Comfort. Dubai's premier luxury chauffeur service.",
@@ -122,7 +122,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.email": "البريد الإلكتروني",
     "contact.location": "الموقع",
     "contact.chat": "تحدث معنا",
-    "contact.dubai": "دبي، الإمارات",
+    "contact.dubai": "مكتب 160، برج التبادل، شارع الملك.mustaqbal، حي الأعمال، دبي",
 
     // Footer
     "footer.tagline": "رحلات سلسة، راحة لا مثيل لها. خدمة السائق الخاص الفاخرة الرائدة في دبي.",

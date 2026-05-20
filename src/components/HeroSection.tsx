@@ -83,15 +83,15 @@ export default function HeroSection() {
       <div className="relative z-20 max-w-[1200px] mx-auto px-6 pt-28 pb-32">
         <div className="max-w-[520px]">
 
-          <p className="text-gold text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">
+          <h1 className="text-gold text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">
             PREMIUM CHAUFFEUR SERVICES
-          </p>
+          </h1>
 
-          <h1 className="text-[42px] md:text-[56px] lg:text-[64px] leading-[1.05] font-semibold text-white mb-5">
+          <h2 className="text-[42px] md:text-[56px] lg:text-[64px] leading-[1.05] font-semibold text-white mb-5">
             Seamless Journeys,
          
             <span className="text-gold">Unmatched Comfort</span>
-          </h1>
+          </h2>
 
           <p className="text-white/70 text-[15px] md:text-[17px] leading-relaxed mb-8 max-w-[440px]">
             Dubai's premier luxury chauffeur service, redefining travel

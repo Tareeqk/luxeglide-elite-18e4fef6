@@ -14,8 +14,8 @@ const ContactSection = () => {
   const items = [
     { icon: Phone, title: t("contact.call"), detail: "+971 56 242 7288", href: `tel:${PHONE}` },
     { icon: MessageCircle, title: t("contact.wa"), detail: t("contact.chat"), href: `https://wa.me/${WHATSAPP}` },
-    { icon: Mail, title: t("contact.email"), detail: "info@Luxeglide.elite@hotmail.com", href: "mailto:info@Luxeglide.elite@hotmail.com" },
-    { icon: MapPin, title: t("contact.location"), detail: t("contact.dubai"), href: "https://maps.app.goo.gl/oMedxFejHPvregjdA?g_st=ic" },
+    { icon: Mail, title: t("contact.email"), detail: "Info@luxeglideelite.ae", href: "mailto:Info@luxeglideelite.ae" },
+    { icon: MapPin, title: t("contact.location"), detail: t("contact.dubai"), href: "https://maps.app.goo.gl/5ArcqpETDTJ6N1sT8" },
   ];
   return (
     <section id="contact" className="py-20 md:py-32 bg-background">
