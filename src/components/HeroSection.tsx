@@ -1,101 +1,105 @@
-import { Phone, MessageCircle, Car, ShieldCheck, Clock, User } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import {
+  Phone,
+  MessageCircle,
+  Car,
+  ShieldCheck,
+  Clock,
+  User,
+} from "lucide-react"
+import { useEffect, useRef, useState } from "react"
 
-import heroImage from "../assets/cars.png";
+import heroImage from "../assets/cars.png"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const PHONE = "+971562427288"
 const WHATSAPP = "971562427288"
 
 export default function HeroSection() {
+  const { t } = useLanguage()
   const items = [
     {
       icon: Car,
-      title: "Premium Fleet",
-      desc: "Top of the line vehicles for ultimate comfort.",
+      title: t("hero.feat1.title"),
+      desc: t("hero.feat1.desc"),
     },
     {
       icon: User,
-      title: "Professional Drivers",
-      desc: "Experienced, courteous, and always on time.",
+      title: t("hero.feat2.title"),
+      desc: t("hero.feat2.desc"),
     },
     {
       icon: ShieldCheck,
-      title: "Safety First",
-      desc: "Your safety is our top priority.",
+      title: t("hero.feat3.title"),
+      desc: t("hero.feat3.desc"),
     },
     {
       icon: Clock,
-      title: "24/7 Availability",
-      desc: "Always here when you need us.",
+      title: t("hero.feat4.title"),
+      desc: t("hero.feat4.desc"),
     },
-  ];
+  ]
 
-  const [index, setIndex] = useState(0);
-  const startX = useRef(0);
-  const isDragging = useRef(false);
+  const [index, setIndex] = useState(0)
+  const startX = useRef(0)
+  const isDragging = useRef(false)
 
   // 🔥 AUTO SLIDE
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % items.length);
-    }, 3500);
+      setIndex((prev) => (prev + 1) % items.length)
+    }, 3500)
 
-    return () => clearInterval(interval);
-  }, [items.length]);
+    return () => clearInterval(interval)
+  }, [items.length])
 
   // 🔥 TOUCH EVENTS
   const handleTouchStart = (e: React.TouchEvent) => {
-    startX.current = e.touches[0].clientX;
-    isDragging.current = true;
-  };
+    startX.current = e.touches[0].clientX
+    isDragging.current = true
+  }
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    if (!isDragging.current) return;
+    if (!isDragging.current) return
 
-    const endX = e.changedTouches[0].clientX;
-    const diff = startX.current - endX;
+    const endX = e.changedTouches[0].clientX
+    const diff = startX.current - endX
 
     if (diff > 50) {
       // swipe left
-      setIndex((prev) => (prev + 1) % items.length);
+      setIndex((prev) => (prev + 1) % items.length)
     } else if (diff < -50) {
       // swipe right
-      setIndex((prev) => (prev - 1 + items.length) % items.length);
+      setIndex((prev) => (prev - 1 + items.length) % items.length)
     }
 
-    isDragging.current = false;
-  };
+    isDragging.current = false
+  }
 
   return (
     <section className="relative min-h-screen bg-black font-sans overflow-hidden">
-
-  
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Luxury cars"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
       </div>
-
 
       <div className="relative z-20 max-w-[1200px] mx-auto px-6 pt-28 pb-32">
         <div className="max-w-[520px]">
-
           <h1 className="text-gold text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">
-            PREMIUM CHAUFFEUR SERVICES
+            {t("hero.tag")}
           </h1>
 
           <h2 className="text-[42px] md:text-[56px] lg:text-[64px] leading-[1.05] font-semibold text-white mb-5">
-            Seamless Journeys,
-         
-            <span className="text-gold">Unmatched Comfort</span>
+            {t("hero.title1")}
+            <span className="text-gold">{t("hero.title2")}</span>
           </h2>
 
           <p className="text-white/70 text-[15px] md:text-[17px] leading-relaxed mb-8 max-w-[440px]">
-            Dubai's premier luxury chauffeur service, redefining travel
-            with sophistication, comfort, and reliability.
+            {t("hero.desc")}
           </p>
 
           <div className="flex items-center gap-3">
@@ -104,7 +108,7 @@ export default function HeroSection() {
               className="flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-foreground text-sm font-semibold hover:bg-gold-light transition"
             >
               <Phone size={16} />
-              Call Now
+              {t("hero.call")}
             </a>
 
             <a
@@ -114,16 +118,13 @@ export default function HeroSection() {
               className="flex items-center gap-2 px-6 py-3 rounded-full border border-gold text-gold text-sm font-medium hover:bg-gold hover:text-black transition"
             >
               <MessageCircle size={16} />
-              WhatsApp Us
+              {t("hero.wa")}
             </a>
           </div>
         </div>
       </div>
 
-   
       <div className="relative z-30 -mt-20 px-6">
-
- 
         <div className="hidden sm:grid max-w-[1200px] mx-auto grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item, i) => (
             <div
@@ -133,9 +134,7 @@ export default function HeroSection() {
               <item.icon className="w-8 h-8 text-gold flex-shrink-0" />
 
               <div>
-                <h3 className="text-[15px] font-medium mb-1">
-                  {item.title}
-                </h3>
+                <h3 className="text-[15px] font-medium mb-1">{item.title}</h3>
                 <p className="text-white/60 text-[12.5px] leading-relaxed">
                   {item.desc}
                 </p>
@@ -144,7 +143,6 @@ export default function HeroSection() {
           ))}
         </div>
 
-     
         <div
           className="sm:hidden max-w-[320px] mx-auto overflow-hidden"
           onTouchStart={handleTouchStart}
@@ -164,9 +162,7 @@ export default function HeroSection() {
                 <item.icon className="w-8 h-8 text-gold flex-shrink-0" />
 
                 <div>
-                  <h3 className="text-[15px] font-medium mb-1">
-                    {item.title}
-                  </h3>
+                  <h3 className="text-[15px] font-medium mb-1">{item.title}</h3>
                   <p className="text-white/60 text-[12.5px] leading-relaxed">
                     {item.desc}
                   </p>
@@ -191,5 +187,5 @@ export default function HeroSection() {
 
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent" />
     </section>
-  );
+  )
 }

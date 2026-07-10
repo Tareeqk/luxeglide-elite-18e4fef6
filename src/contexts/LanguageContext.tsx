@@ -33,6 +33,14 @@ const translations: Record<Language, Record<string, string>> = {
       "Dubai's premier luxury chauffeur service, redefining travel with sophistication, comfort, and reliability.",
     "hero.call": "Call Now",
     "hero.wa": "WhatsApp Us",
+    "hero.feat1.title": "Premium Fleet",
+    "hero.feat1.desc": "Top of the line vehicles for ultimate comfort.",
+    "hero.feat2.title": "Professional Drivers",
+    "hero.feat2.desc": "Experienced, courteous, and always on time.",
+    "hero.feat3.title": "Safety First",
+    "hero.feat3.desc": "Your safety is our top priority.",
+    "hero.feat4.title": "24/7 Availability",
+    "hero.feat4.desc": "Always here when you need us.",
 
     // About
     "about.tag": "About Us",
@@ -97,13 +105,21 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.whatsapp": "واتساب",
 
     // Hero
-    "hero.tag": "خدمة سائق خاص راقية في دبي",
-    "hero.title1": "انسيابية الرحلة...",
-    "hero.title2": "وراحة بلا مثيل",
+    "hero.tag": "خدمات السائق الخاص الفاخرة",
+    "hero.title1": "رحلات سلسة،",
+    "hero.title2": "وراحة لا مثيل لها",
     "hero.desc":
-      "لوكسي جلايد إيليت هي خدمة السائق الخاص الفاخرة الرائدة في دبي، نعيد تعريف السفر بالأناقة والراحة والموثوقية.",
+      "خدمة السائق الخاص الفاخرة الرائدة في دبي، نعيد تعريف تجربة التنقل من خلال الأناقة، والراحة، والموثوقية.",
     "hero.call": "اتصل الآن",
-    "hero.wa": "راسلنا واتساب",
+    "hero.wa": "تواصل معنا عبر واتساب",
+    "hero.feat1.title": "أسطول فاخر",
+    "hero.feat1.desc": "مركبات فاخرة من الطراز الأول لتوفير أقصى درجات الراحة.",
+    "hero.feat2.title": "سائقون محترفون",
+    "hero.feat2.desc": "ذوو خبرة، لبقون، ودائمًا في الموعد المحدد.",
+    "hero.feat3.title": "السلامة أولاً",
+    "hero.feat3.desc": "سلامتك هي أولويتنا القصوى.",
+    "hero.feat4.title": "متاحون على مدار الساعة",
+    "hero.feat4.desc": "نحن هنا دائمًا عندما تحتاج إلينا.",
 
     // About
     "about.tag": "من نحن",
